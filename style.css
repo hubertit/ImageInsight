@@ -1,0 +1,26 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #007bff;
+}
+
+.card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#results {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+.result-item {
+    margin-bottom: 10px;
+}
