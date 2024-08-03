@@ -12,16 +12,21 @@ async function analyzeImage() {
     const formData = new FormData();
     formData.append('image', file);
 
-    const response = await fetch('https://api.deepai.org/api/image-recognition', {
-        method: 'POST',
-        headers: {
-            'api-key': '30b42df1-07b7-4311-99e6-6e0485d42bf5'
-        },
-        body: formData
-    });
+    try {
+        const response = await fetch('https://api.deepai.org/api/image-recognition', {
+            method: 'POST',
+            headers: {
+                'api-key': '30b42df1-07b7-4311-99e6-6e0485d42bf5'
+            },
+            body: formData
+        });
 
-    const data = await response.json();
-    displayResults(data);
+        const data = await response.json();
+        console.log(data); // Log the entire response for debugging
+        displayResults(data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
 function displayResults(data) {
